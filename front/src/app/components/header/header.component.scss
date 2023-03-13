@@ -1,0 +1,115 @@
+mat-toolbar {
+  color: #605f5f;
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 250px;
+  background-color: #e8e8e8;
+
+
+  .search-bar{
+    width: 400px;
+    height: 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 100px;
+    border: none;
+    background-color: #fff;
+
+    .icon_search{
+      margin: 0 30px;
+    }
+
+    .input{
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+      border: none;
+      outline: none;
+    }
+
+  }
+
+  .config{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+
+    .icon{
+      margin: 0 10px;
+      border-radius: 100px;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #605f5f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .icon:hover{
+        background-color: #4e568d;
+        color: #fff;
+    }
+
+    .example-header-image {
+      background-image: url('https://previews.123rf.com/images/yupiramos/yupiramos1705/yupiramos170508337/77700000-avatar-joven-hombre-ilustraci%C3%B3n-vectorial-de-dise%C3%B1o-avatar.jpg');
+      background-size: cover;
+    }
+
+    .config_text{
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  mat-toolbar {
+    padding-left: 0;
+    height: 160px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .search-bar{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 100px;
+    border: none;
+    background-color: #fff;
+    margin: 10px 0;
+
+    .config{
+      padding: 0;
+      margin: 0;
+      height: 80px !important;
+      width: fit-content;
+    }
+
+    .icon_search{
+      margin: 0 30px;
+    }
+
+    .input{
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+      border: none;
+      outline: none;
+    }
+
+  }
+
+}

@@ -1,0 +1,18 @@
+<mat-sidenav-container class="sidenav-container">
+  <mati-sidenav class="sidenav" mode="side" opened="true">
+
+    <div class="div_logo">
+      <p class="logo">LOGO</p>
+    </div>
+
+    <mat-nav-list>
+      <div class="align" *ngFor="let item of data">
+        <mat-icon class="icon" aria-hidden="false" aria-label="Example home icon" fontIcon="{{item.icon}}"></mat-icon>
+        <a class="link" (click)="logout(item.link)" mat-list-item routerLink="{{item.link}}" routerLinkActive="active">
+          {{item.title}}
+        </a>
+      </div>
+    </mat-nav-list>
+
+  </mati-sidenav>
+</mat-sidenav-container>

@@ -1,0 +1,201 @@
+.main{
+  padding: 0 40px;
+  height: 88.5vh;
+  .title{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-align: start;
+    padding-bottom: 20px;
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+
+    .example-full-width {
+      padding: 20px;
+    }
+
+    .submit{
+      width: 150px;
+      height: 50px;
+      background-color: #494cff;
+      border-radius: 20px;
+      border: none;
+    }
+
+  }
+}
+
+.demo-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.mat-column-demo-position {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.mat-column-demo-name {
+  padding-left: 16px;
+  font-size: 20px;
+}
+
+.mat-column-demo-weight {
+  font-style: italic;
+}
+
+.mat-column-demo-symbol {
+  width: 32px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 960px) {
+  .mat-table {
+    border: 0;
+    vertical-align: middle
+  }
+
+  .mat-table caption {
+    font-size: 1em;
+  }
+
+  /*  Enable this to hide header
+  .mat-table .mat-header-cell {
+
+    border: 10px solid;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  */
+  .mat-table .mat-row {
+    border-bottom: 5px solid #ddd;
+    display: block;
+  }
+  /*
+  .mat-table .mat-row:nth-child(even) {background: #CCC}
+  .mat-table .mat-row:nth-child(odd) {background: #FFF}
+  */
+  .mat-table .mat-cell {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 1em;
+    text-align: right;
+    font-weight: bold;
+    height:30px;
+    margin-bottom: 4%;
+  }
+  .mat-table .mat-cell:before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: normal;
+
+    font-size: .85em;
+  }
+  .mat-table .mat-cell:last-child {
+    border-bottom: 0;
+  }
+    .mat-table .mat-cell:first-child {
+    margin-top: 4%;
+  }
+}
+
+// .main {
+//   background-color: #e8e8e8;
+
+//   .main_title {
+//     font-size: 1.5rem;
+//     font-weight: 500;
+//     margin: 1rem 0;
+//     padding-left: 45px;
+//     text-align: start;
+//   }
+
+//   .main_title_flex {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-around;
+//   }
+// }
+
+// .grid {
+//   display: grid;
+//   grid-gap: 1rem;
+//   padding: 1rem;
+//   grid-template-areas:
+//   "a a a"
+//   "b b b"
+//   "c c c"
+//   "d d d";
+//   grid-template-columns: 1fr 1fr 1fr;
+//   grid-template-rows: 40px auto auto auto;
+// }
+
+// .a {
+//   grid-area: a;
+// }
+
+// .b {
+//   grid-area: b;
+//   padding: 1rem;
+// }
+
+// .c {
+//   grid-area: c;
+//   padding: 1rem;
+// }
+
+// .d{
+//   grid-area: d;
+//   padding: 1rem;
+// }
+
+// .padding_left {
+//   padding-left: 1rem;
+// }
+
+// @media screen and (max-width: 1400px) {
+//   .main_title_flex {
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: center;
+//     justify-content: center !important;
+//   }
+
+//   .grid{
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   .padding_top {
+//     padding-top: 1rem;
+//   }
+
+// }
+
+// @media screen and (max-width: 600px) {
+
+//   .c, .d {
+//     display: none !important;
+//   }
+
+// }
+

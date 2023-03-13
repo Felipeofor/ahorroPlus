@@ -1,0 +1,74 @@
+<section class="conteiner">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 cuotas_tabla">
+    &lt;!&ndash; Checkbox Column &ndash;&gt;
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef>
+        <mat-checkbox (change)="$event ? toggleAllRows() : null"
+                      [checked]="selection.hasValue() && isAllSelected()"
+                      [indeterminate]="selection.hasValue() && !isAllSelected()"
+                      [aria-label]="checkboxLabel()">
+        </mat-checkbox>
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <mat-checkbox (click)="$event.stopPropagation()"
+                      (change)="$event ? selection.toggle(row) : null"
+                      [checked]="selection.isSelected(row)"
+                      [aria-label]="checkboxLabel(row)">
+        </mat-checkbox>
+      </td>
+    </ng-container>
+
+    &lt;!&ndash; Name Column &ndash;&gt;
+    <ng-container matColumnDef="Monto Total">
+      <th class="cuotas_tabla_th height" mat-header-cell *matHeaderCellDef> Monto Total</th>
+      <td class="height" mat-cell *matCellDef="let element">
+        <p class="weight">{{formatCurrency(element.montoTotal)}}</p>
+        <p class="grey">Sin interés</p>
+      </td>
+    </ng-container>
+
+    &lt;!&ndash; Weight Column &ndash;&gt;
+    <ng-container matColumnDef="Cuotas">
+      <th class="cuotas_tabla_th" mat-header-cell *matHeaderCellDef> Cuotas</th>
+      <td class="weight height" mat-cell *matCellDef="let element"> Cuota {{element.cuotasPagas}} - {{element.cuotasTotal}}</td>
+    </ng-container>
+
+    &lt;!&ndash; Symbol Column &ndash;&gt;
+    <ng-container matColumnDef="Fecha de emisión">
+      <th class="cuotas_tabla_th" mat-header-cell *matHeaderCellDef> Fecha de emisión</th>
+      <td class="grey height" mat-cell *matCellDef="let element">
+        {{element.fechaEmision | date: 'MMM d, y'}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Mensual">
+      <th class="cuotas_tabla_th" mat-header-cell *matHeaderCellDef> Mensual</th>
+      <td class="weight height" mat-cell *matCellDef="let element"> {{element.montoCuota | currency: 'USD'}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Tasa de interes">
+      <th class="cuotas_tabla_th" mat-header-cell *matHeaderCellDef> Tasa de interés</th>
+      <td class="grey height" mat-cell *matCellDef="let element"> {{element.interes}}% interés </td>
+    </ng-container>
+
+    <ng-container matColumnDef="botones">
+      <th class="cuotas_tabla_th" mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell class="height" *matCellDef="let element">
+        <mat-button-toggle style="background-color:{{element.estado === 'activo' ? '#9b9b9b' : '#353A61'}} !important" class="cuotas_tabla_btn" value="left" aria-label="Left Align">
+          {{element.estado === 'activo' ? 'Pagar' : 'Cancelado'}}
+        </mat-button-toggle>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="mas">
+      <th class="cuotas_tabla_th" mat-header-cell *matHeaderCellDef></th>
+      <td class="hover_radius height" mat-cell *matCellDef="let element">...</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+        (click)="selection.toggle(row)">
+    </tr>
+  </table>
+</section>
+

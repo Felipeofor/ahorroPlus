@@ -1,0 +1,21 @@
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  background-color: white;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 40px;
+  padding-top: 20px;
+
+  .contenedor_text{
+    padding-left: 20px;
+    font-weight: bold;
+  }
+
+  .chart{
+    background-color: white;
+    border-radius: 40px;
+  }
+}

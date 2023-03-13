@@ -1,0 +1,27 @@
+.cssload-container {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.cssload-speeding-wheel {
+  position: absolute;
+  font-size: 3rem;
+  color: #fff;
+  top: 42%;
+  left: 42%;
+  width: 63px;
+  height: 63px;
+  margin: 0 auto;
+  animation: cssload-spin 1500ms infinite linear;
+  -o-animation: cssload-spin 500ms infinite linear;
+  -ms-animation: cssload-spin 500ms infinite linear;
+  -webkit-animation: cssload-spin 500ms infinite linear;
+  -moz-animation: cssload-spin 500ms infinite linear;
+
+}

@@ -1,0 +1,24 @@
+<section *ngFor="let data of card" class="card">
+  <div>
+    <div class="card_header">
+      <h2 class="card_title">Mi saldo</h2>
+      <p class="card_value weight">{{monto}}</p>
+    </div>
+  </div>
+
+  <div class="card_number">
+    <p class="weight">.... .... .... {{numeroTarjeta}}</p>
+  </div>
+
+  <div class="car_info">
+    <div class="card_date">
+      <p>Titular tarjeta</p>
+      <p class="weight">{{data.name}}</p>
+    </div>
+    <div class="card_date">
+      <p>Valido hasta</p>
+      <p class="weight">{{data.dateExp}}</p>
+    </div>
+  </div>
+
+</section>

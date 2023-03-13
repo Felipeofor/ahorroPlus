@@ -1,0 +1,48 @@
+.cuotas_tabla {
+  box-shadow: none;
+}
+
+
+.cuotas_tabla_th {
+  background-color: #e8e8e8 !important;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cuotas_tabla_btn {
+  background-color: #9b9b9b !important;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 30px !important;
+  padding: 0;
+  width: 100%;
+}
+
+
+.hover_radius:hover {
+  border-radius: 100px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+p{
+  padding: 0;
+  margin: 0;
+}
+
+.weight{
+  font-weight: 700;
+}
+
+.grey{
+  color: #9b9b9b;
+}
+
+
+.height{
+  height: 80px !important;
+}
+

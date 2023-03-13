@@ -1,0 +1,58 @@
+<section class="conteiner">
+  <div>
+    <h2 class="conteiner_title">Últimas transacciones</h2>
+    <table class="table"  mat-table [dataSource]="dataSource">
+      <!-- Position Column -->
+      <ng-container matColumnDef="icono">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <mat-icon
+            style="color: {{changeColor(element.estado)}}">{{changeIcon(element.estado) || "help"}}</mat-icon>
+        </td>
+      </ng-container>
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td class="font_weight" mat-cell *matCellDef="let element">{{element.name}}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="monto">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td class="font_weight" mat-cell *matCellDef="let element">{{element.monto | currency: 'USD'}}</td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="fecha">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <p class="font_weight">{{element.fecha | date: 'dd/MM/yyyy'}}</p>
+          <p>{{element.fecha | date: 'hh:mm:ss a'}}</p>
+        </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="estado">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td style="color: {{changeColor(element.estado)}}" mat-cell *matCellDef="let element">{{element.estado}}</td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="mas">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td class="hover_radius" mat-cell *matCellDef="let element">...</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+
+</section>
+
